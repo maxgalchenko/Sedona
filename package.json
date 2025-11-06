@@ -4,7 +4,9 @@
   "description": "best regards",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp dev",
+    "build": "gulp build"
   },
   "author": "andrew",
   "license": "ISC",
@@ -24,11 +26,12 @@
     "gulp-imagemin": "^6.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "imagemin-webp": "^5.1.0",
     "prettier": "^1.18.2",
     "rangetouch": "^2.0.0",
+    "sass": "^1.77.0",
     "webpack": "^4.41.2",
     "webpack-stream": "^5.2.1"
   },

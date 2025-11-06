@@ -4,7 +4,7 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const del = require('del');
 const postcss = require('gulp-postcss');
-const sass = require('gulp-sass');
+const gulpSass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const webpackStream = require('webpack-stream');
@@ -29,7 +29,7 @@ const CONFIG = {
 
 function cssTask(done) {
   src(CONFIG.src.sass)
-    .pipe(sass())
+    .pipe(gulpSass())
     .pipe(rename({ suffix: '.bundle' }))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest(CONFIG.docs.base));
